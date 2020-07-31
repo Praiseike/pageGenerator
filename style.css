@@ -1,0 +1,40 @@
+body {
+    color:#f3f3f3;
+    background:#282828;
+    margin:0;
+}
+
+.text {
+    background:#414141;
+    border-radius: 8px;
+    width:900px;
+    font-size:20px;
+    text-align: center;
+    padding:10px;
+    color:#f3f3f3;
+    margin:30px;
+}
+pre {
+    text-align: left;
+    border:1px solid grey;
+    width:900px;
+}
+
+code {
+    margin-left:-100px;
+    font-size: 20px;
+    width:100px;
+    padding:10px;
+    border-radius: 8px;
+    margin-top:10px;
+}
+
+.text-area {
+    width:800px;
+    height:200px;
+    background:#f3f3f3;
+    border:hidden;
+    padding:20px;
+    font-size:20px;
+    border-radius:4px;
+}

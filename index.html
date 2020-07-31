@@ -1,0 +1,106 @@
+<!-- This page serves as a simple illustration format for the bootcamp lessons -->
+<!-- Provides simple text and background formatting for code and normal text -->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Introduction to C programming</title>
+        <!-- <link href="style.css" rel="stylesheet"> -->
+    </head>
+    <style>
+        body {
+        color:#f3f3f3;
+        background:#282828;
+        margin:0;
+        }
+
+        .text {
+            background:#414141;
+            border-radius: 8px;
+            width:900px;
+            font-size:20px;
+            text-align: left;
+            padding:10px;
+            color:#f3f3f3;
+            margin:30px;
+        }
+        pre {
+            text-align: left;
+            border:1px solid grey;
+            width:900px;
+            padding:20px;
+        }
+
+        code {
+            font-size: 20px;
+            width:900px;
+            padding:10px;
+            border-radius: 8px;
+            margin-top:10px;
+        }
+
+        .text-area {
+            width:800px;
+            height:200px;
+            background:#f3f3f3;
+            border:hidden;
+            padding:20px;
+            font-size:20px;
+            border-radius:4px;
+        }
+        .btn {
+            margin:10px;
+            width:100px;
+            height:30px;
+            border:hidden;
+            outline:none;
+            transition: all 0.3s;
+        }
+    </style>
+    <body>
+
+
+        <center>
+        <div class="main-container">
+            <h1>Boot Camp Tutorial on C Programming</h1>
+
+        </div>
+        <div id="create-template">
+            <textarea placeholder="enter text here" class="text-area"></textarea><br>
+            <label for="code">Generate code</label><input required type="radio" name="selection" id="code">
+            <label for="text">Generate text</label><input required type="radio" name="selection" id="text"><br>
+            <button class="btn" onclick="gen_code()">submit</button>
+        </div>
+        
+        </center>
+        </body>
+    <script>
+        
+
+        function gen_code()
+        {
+            if(document.getElementsByName('selection')[0].checked == true)
+            {
+                var text = document.getElementsByTagName('textarea')[0].value;
+                
+                var code = document.createElement('code');
+                var node = document.createTextNode(text);
+                var pre = document.createElement('pre');
+                var container = document.getElementsByClassName('main-container')[0];
+                code.appendChild(node);
+                pre.appendChild(code);
+                container.appendChild(pre);
+            }
+            else
+            {
+                var text = document.getElementsByTagName('textarea')[0].value;
+                var p = document.createElement('p');
+                var node = document.createTextNode(text);
+                p.appendChild(node);
+                p.setAttribute('class','text');
+                var main = document.getElementsByClassName('main-container')[0];
+                main.appendChild(p);
+            }
+        }
+
+    </script>
+</html>
